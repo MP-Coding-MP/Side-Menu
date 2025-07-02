@@ -5,7 +5,7 @@ import { slide, scale } from '../../anim';
 
 export default function Index({data, isActive, setSelectedIndicator}) {
   
-    const { title, href, index} = data;
+    const { title, href, NavMenu} = data;
   
     return (
       <motion.div className={styles.link} onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit">
