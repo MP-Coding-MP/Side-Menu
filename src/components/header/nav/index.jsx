@@ -26,7 +26,7 @@ const navItems = [
   },
 ]
 
-export default function index() {
+export default function NavMenu() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -39,8 +39,8 @@ export default function index() {
                         <p>Navigation</p>
                     </div>
                     {
-                      navItems.map( (data, index) => {
-                        return <Link key={index} data={{...data, index}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></Link>
+                      navItems.map( (data, NavMenu) => {
+                        return <Link key={NavMenu} data={{...data, NavMenu}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></Link>
                       })
                     }
             </div>
